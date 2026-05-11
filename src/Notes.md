@@ -4,3 +4,7 @@
 2. **Wat doet `onSubmit` in de form element?**
    - `onSubmit` roept een functie aan wanneer het formulier wordt verzonden.
 3. **Wat doet fieldset?**
+   - Groepeert labels
+4. **Wat doet htmlFor en id in een label?**
+   - `id` is een unieke naam voor een input
+   - `htmlFor` koppelt de label aan de input

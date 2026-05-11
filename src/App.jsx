@@ -2,32 +2,41 @@ import React from 'react';
 import './App.css';
 
 function App() {
-    const [form, setform] = React.useState("")
+
     const [name, setName] = React.useState("")
     const [age, setAge] = React.useState(0)
     const [comment, setComment] = React.useState("")
     const [signup, setSignup] = React.useState(false)
 
+    function handleSubmit(e) {
+        e.preventDefault()
+        console.log("Verstuurd!")
+    }
+
+
     return (
         <div>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <fieldset>
                 <legend>Gegevens</legend>
-                    <label>
+                    <label htmlFor="name">
                         Naam:
                         <input
                             type="text"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
+                            id="name"
                         />
                     </label>
 
-                    <label>
+                    <label htmlFor="age">
                         Leeftijd:
                         <input
                             type="number"
                             value={age}
                             onChange={(e) => setAge(e.target.value)}
+                            id="age"
+
                         />
                     </label>
                 </fieldset>
@@ -35,25 +44,29 @@ function App() {
             <fieldset>
                 <legend>Jouw review</legend>
 
-                    <label>
+                    <label htmlFor="comment">
                         Opmerkingen:
                         <textarea
                             placeholder={"Wat vond je van het recept?"}
                             value={comment}
                             onChange={(e) => setComment(e.target.value)}
+                            id="comment"
                         >
                     </textarea>
                     </label>
 
-                    <label>
+                    <label htmlFor="signup">
                         <input
                             type="checkbox"
                             value={signup}
                             onChange={(e) => setSignup(e.target.checked)}
+                            id="signup"
                         />
                         Ik schrijf me in voor de nieuwsbrief
                     </label>
-                    <button type="submit">
+                    <button
+                        type="submit"
+                    >
                         Versturen
                     </button>
             </fieldset>
