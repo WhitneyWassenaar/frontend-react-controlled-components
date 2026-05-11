@@ -13,12 +13,11 @@ function App() {
         console.log(name, age, comment, signup)
     }
 
-
     return (
         <div>
             <form onSubmit={handleSubmit}>
                 <fieldset>
-                <legend>Gegevens</legend>
+                    <legend>Gegevens</legend>
                     <label htmlFor="name">
                         Naam:
                         <input
@@ -36,13 +35,12 @@ function App() {
                             value={age}
                             onChange={(e) => setAge(e.target.value)}
                             id="age"
-
                         />
                     </label>
                 </fieldset>
 
-            <fieldset>
-                <legend>Jouw review</legend>
+                <fieldset>
+                    <legend>Jouw review</legend>
 
                     <label htmlFor="comment">
                         Opmerkingen:
@@ -69,7 +67,7 @@ function App() {
                     >
                         Versturen
                     </button>
-            </fieldset>
+                </fieldset>
             </form>
         </div>
     );
