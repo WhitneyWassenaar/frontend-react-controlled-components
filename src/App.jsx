@@ -14,7 +14,7 @@ function App() {
     }
 
     return (
-        <div>
+        <div className="container">
             <form onSubmit={handleSubmit}>
                 <fieldset>
                     <legend>Gegevens</legend>
@@ -33,7 +33,7 @@ function App() {
                         <input
                             type="number"
                             value={age}
-                            onChange={(e) => setAge(e.target.value)}
+                            onChange={(e) => setAge(Number(e.target.value))}
                             id="age"
                         />
                     </label>
@@ -42,8 +42,7 @@ function App() {
                 <fieldset>
                     <legend>Jouw review</legend>
 
-                    <label htmlFor="comment">
-                        Opmerkingen:
+                    <label htmlFor="comment">Opmerkingen:</label>
                         <textarea
                             placeholder={"Wat vond je van het recept?"}
                             value={comment}
@@ -51,12 +50,12 @@ function App() {
                             id="comment"
                         >
                     </textarea>
-                    </label>
+
 
                     <label htmlFor="signup">
                         <input
                             type="checkbox"
-                            value={signup}
+                            checked={signup}
                             onChange={(e) => setSignup(e.target.checked)}
                             id="signup"
                         />
