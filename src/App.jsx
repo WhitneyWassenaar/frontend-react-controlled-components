@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 function App() {
-
+    const [form, setform] = React.useState("")
     const [name, setName] = React.useState("")
     const [age, setAge] = React.useState(0)
     const [comment, setComment] = React.useState("")
@@ -11,8 +11,8 @@ function App() {
     return (
         <div>
             <form>
-                <legend>
-                    Gegevens
+                <fieldset>
+                <legend>Gegevens</legend>
                     <label>
                         Naam:
                         <input
@@ -30,10 +30,10 @@ function App() {
                             onChange={(e) => setAge(e.target.value)}
                         />
                     </label>
-                </legend>
+                </fieldset>
 
-                <legend>
-                    Jouw review
+            <fieldset>
+                <legend>Jouw review</legend>
 
                     <label>
                         Opmerkingen:
@@ -56,7 +56,7 @@ function App() {
                     <button type="submit">
                         Versturen
                     </button>
-                </legend>
+            </fieldset>
             </form>
         </div>
     );
