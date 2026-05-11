@@ -42,3 +42,11 @@ console.log(name, age, comment, signup);
 ```
 
 - Nu wordt in de console de data weergegeven die is ingevoerd.
+
+---
+
+Bonus: Snel klaar met deze opdracht en opzoek naar een extra uitdaging? Het is mogelijk (en in de parktijk ook gebruikelijk) om slechts één functie en één state variabele te gebruiken waarmee álle onChange listeners worden afgevangen.
+
+Documentatie voor bonus opdracht:
+
+https://www.pluralsight.com/resources/blog/guides/handling-multiple-inputs-with-single-onchange-handler-react
